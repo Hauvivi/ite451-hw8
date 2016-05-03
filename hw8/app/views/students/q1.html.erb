@@ -1,0 +1,15 @@
+<h1>How many students have a GPA of 3.5 or greater?</h1>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>GPA</th>
+    </tr>
+    
+    <% @results.each do |doc| %>
+        <tr>
+            <td><%= doc.[:first_name] %></td>
+            <td><%= doc.[:last_name] %></td>
+            <td><% doc.[:gpa] %></td>
+        </tr>
+</table>
